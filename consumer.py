@@ -24,7 +24,7 @@ while(hour<=72):
         hashtagsList = []
         keywordsStrList = []
         specificWordsStr = []
-        for r in hashtags.rdd.collect():
+        for r in df.rdd.collect():
                 if r['entities']:
                         for hashtag in r['entities']['hashtags']:
                                 hashtagsList.append(hashtag['text'])
